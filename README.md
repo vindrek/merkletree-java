@@ -22,14 +22,14 @@ If balancing and audit proof chain depth werent't a requirement at all then the 
 
 ### Running the application
 
-Either clone the repo and build the project using the checked in Gradle wrapper or download the binary. The application expects the following command-line arguments:  
+Either clone the repo and build the project using the checked in Gradle wrapper or [download the binary](https://github.com/vindrek/merkletree-java/releases/tag/0.1-SNAPSHOT). The application expects the following command-line arguments:  
 1) path to the logfile  
 2) name of the hashing algorithm as per [Java Cryptography Architecture Standard Algorithm Name Documentation](https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#MessageDigest)  
 3) logfile record for which an audit trail is requested (optional)  
 
 For example, 
 ```
-java -jar merkletree-1.0-SNAPSHOT.jar /path/to/log.txt SHA-256 audit-proof-for-me-please
+java -jar merkletree-0.1-SNAPSHOT.jar /path/to/log.txt SHA-256 audit-proof-for-me-please
 ```
 
 Requirements:  
