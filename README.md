@@ -8,7 +8,7 @@ The time complexity of the algorithm is O(n).
 
 Why recursion? While using imperative loops would've been the go-to style (and more performant) to use with Java, the author finds that the algorithm of tree building is best explained recursively. Moreover, a top-down "divide and conquer" strategy implemented in some functional programming language could further improve the declarativeness/verbosity and make the code more maintainable (with a trade-off of some effectiveness).  
 
-To showcase root hash signing procedure, the application includes dummy calls to GuardTime's KSI SDK for the root hash signing procedure.  
+To showcase root hash signing procedure, the application includes dummy calls to Guardtime's KSI SDK for the root hash signing procedure.  
 
 
 ### Performance
