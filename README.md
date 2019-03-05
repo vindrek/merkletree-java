@@ -8,10 +8,25 @@ The time complexity of the algorithm is O(n).
 
 Why recursion? While using imperative loops would've been the go-to style (and more performant) to use with Java, the author finds that the algorithm of tree building is best explained recursively. Moreover, a top-down "divide and conquer" strategy implemented in some functional programming language could further improve the declarativeness/verbosity and make the code more maintainable (with a trade-off of some effectiveness).  
 
-It must be noted that this is still a POC and the code could be further optimized for real-world use. For example, the application loads the whole log file in to the memory first and processes it all at once. Therefore, at it's current state, the project is not optimized and appropriate for large log files. As a possible solution, modifications could be made to process the file in N-row chunks and then merge the corresponding subtrees (possibly also in chunks).    
-
 To showcase root hash signing procedure, the application includes dummy calls to GuardTime's KSI SDK for the root hash signing procedure.  
 
+
+### Performance
+
+It must be noted that this is still a POC and the code could be further optimized for real-world use. For example, the application loads the whole log file (in UTF-8) in to the memory first and processes it all at once.  
+
+1 run test result for getting a root hash for 587,7 MB file with 2647237 rows:
+
+```
+time java -jar merkletree-0.1-SNAPSHOT.jar /Users/Indrek/dev/merkletree/src/main/resources/access.log SHA-256
+Root hash: 50c8f3ccfab40ce9d9ca57f9b6d3f5ca06ca32a70624d0b47e391b12c49f92af
+
+real	0m12.683s
+user	0m37.009s
+sys	0m2.807s
+```
+
+Therefore, at it's current state, the project is not optimized and appropriate for large log files. As a possible solution, modifications could be made to process the file in N-row chunks and then merge the corresponding subtrees (possibly also in chunks).  
 
 ### Balancing  
 

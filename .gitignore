@@ -4,3 +4,4 @@ out/
 build/
 out/
 *.iml
+src/main/resources/access.log
