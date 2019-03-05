@@ -34,7 +34,7 @@ public class TreeBuilder {
 
     /**
      * @param logRecords read from the provided log file
-     * @return a balanced binary tree with the max depth of log2(n) + 1
+     * @return a binary tree with the max depth of log2(n) + 1
      */
     public Tree build(LinkedList<byte[]> logRecords) {
         Node[] leaves = logRecords
