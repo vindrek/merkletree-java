@@ -45,9 +45,34 @@ Either clone the repo and build the project using the checked in Gradle wrapper 
 2) name of the hashing algorithm as per [Java Cryptography Architecture Standard Algorithm Name Documentation](https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#MessageDigest)  
 3) logfile record for which an audit trail is requested (optional)  
 
-For example, 
+Example input:
 ```
 java -jar merkletree-0.1-SNAPSHOT.jar /path/to/log.txt SHA-256 audit-proof-for-me-please
+```
+
+Example output:
+```
+Root hash: 37cdcb925de966a3c2464df3b129829bfbf9391b27cfe0554f266f9fed73d601
+
+Audit trail (bottom-up)
+
+9a56c9fd833704abc1b862c7a990bafec41b35afaa536da210b04a16bf04742f
+^
+9a56c9fd833704abc1b862c7a990bafec41b35afaa536da210b04a16bf04742f
+^
+e11cd946492dfe746e602beaefb32ec0270a69527a30ca7b227878a7776f924e
+^
+ca26959ec0aefff80626c8c8684abe481c0d78997e2107624256239465110bc5
+^
+c5ad7b8eb5fc8f230dfd0b898d532d3932d8f8e56893c0a2176b50691e98e477
+^
+aae489785ae3d60a6e542d44b772a33e72b1d74bcc209dc8faaa651516ee72c1
+^
+a28375409b45133b143884e3461e2dcbb5c89a4b99135360ed4a64a546e4226f
+^
+aa3d3974f44df74046a67bffd29baf62c3132ebf68f2a87e241b09b203838e4f
+^
+524992e8d7c34acdbb3ca480645c9aaf94f7de100ed9f6c67d8924cda98ce1bf
 ```
 
 Requirements:  
