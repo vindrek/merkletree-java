@@ -2,13 +2,16 @@
 
 ## A simple POC application to build Merkle (binary) trees from log files and generate audit proofs of their records.
 
-The implementation builds the tree using a tail call optimized (sadly, not really optimized in JVM) recursive bottom-up "decrease and conquer" strategy while aggregating nodes in parallel, using Java Streams API. 
+The implementation builds the tree using a tail call optimized (sadly, not really optimized in JVM) recursive bottom-up "decrease and conquer" strategy while aggregating nodes in parallel, using Java Streams API.
 
 The time complexity of the algorithm is O(n).  
 
 Why recursion? While using imperative loops would've been the go-to style (and more performant) to use with Java, the author finds that the algorithm of tree building is best explained recursively. Moreover, a top-down "divide and conquer" strategy implemented in some functional programming language could further improve the declarativeness/verbosity and make the code more maintainable (with a trade-off of some effectiveness).  
 
+It must be noted that this is still a POC and the code could be further optimized for real-world use. For example, the application loads the whole log file in to the memory first and processes it all at once. Therefore, at it's current state, the project is not optimized and appropriate for large log files. As a possible solution, modifications could be made to process the file in N-row chunks and then merge the corresponding subtrees (possibly also in chunks).    
+
 To showcase root hash signing procedure, the application includes dummy calls to GuardTime's KSI SDK for the root hash signing procedure.  
+
 
 ### Balancing  
 

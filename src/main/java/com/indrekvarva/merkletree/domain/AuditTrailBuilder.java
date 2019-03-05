@@ -14,7 +14,7 @@ public class AuditTrailBuilder {
     private enum RecordOriginDirection { LEFT, RIGHT }
 
     /**
-     * Method which finds the corresponding leaf node for the log record and recursively
+     * Finds the corresponding leaf node for the log record and recursively
      * moves bottom-up to capture the audit trail.
      *
      * @param tree pre-built merkle tree with cached hash labels

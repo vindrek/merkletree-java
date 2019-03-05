@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.stream.IntStream;
 
 /**
- * This factory class exposes a bottom-up method to build a Merkle binary tree based on a final/fixed set of log records.
+ * Exposes a bottom-up method to build a Merkle binary tree based on a final/fixed set of log records.
  * The time complexity of tree building algorithm implementation is O(n).
  *
  *

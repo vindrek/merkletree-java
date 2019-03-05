@@ -5,7 +5,7 @@ import lombok.Value;
 import java.security.MessageDigest;
 
 /**
- * The domain service which calculates data hashes using the provided MessageDigest instance.
+ * Calculates data hashes using the provided MessageDigest instance.
  */
 @Value
 public class Hasher {
@@ -34,7 +34,7 @@ public class Hasher {
      * @param right
      * @return byte array of the concatenated hash values
      *
-     * Simple helper method to keep digester stateless in terms of hashable data.
+     * Keeps digester stateless in terms of hashable data.
      * Alternatively, MessageDigest.update() could be used but this would mean that parallel consumption of this service
      * would no longer be thread-safe without cloning the digester for each consumer call.
      */

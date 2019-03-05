@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Arrays;
 
 /**
- * A wrapper class for caching the final tree. Provides entry-point references for traversing the tree
+ * Wraps the final tree. Provides entry-point references for traversing the tree
  * bottom-up (for audit trail) or top-down.
  */
 @Data
