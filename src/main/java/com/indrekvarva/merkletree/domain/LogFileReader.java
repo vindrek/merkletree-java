@@ -8,7 +8,8 @@ import java.util.LinkedList;
 import java.util.stream.Collectors;
 
 /**
- * Reads the log file into the memory all at once, so this is inefficient and not appropriate for large files. Could be improved to process N number of rows at once and process them as they come in.
+ * Reads the log file into the memory all at once, so this is inefficient and not appropriate for large files.
+ * Could be improved to process N number of rows at once and process them as they come in.
  */
 @Value
 public class LogFileReader {
